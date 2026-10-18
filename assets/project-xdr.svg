@@ -1,0 +1,56 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="750" fill="#0B0D12"/>
+  <!-- Top Bar -->
+  <rect x="0" y="0" width="1200" height="48" fill="#131720" stroke="#1E2433"/>
+  <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+  <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+  <circle cx="68" cy="24" r="6" fill="#10B981"/>
+  <rect x="120" y="12" width="400" height="24" rx="4" fill="#0B0D12" stroke="#252D3D"/>
+  <text x="140" y="28" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">wazuh-xdr-cluster.internal/telemetry/pipeline</text>
+
+  <!-- Sidebar -->
+  <rect x="0" y="48" width="220" height="702" fill="#0E1117" stroke="#1E2433"/>
+  <text x="24" y="90" fill="#E6C4CF" font-family="-apple-system, sans-serif" font-size="13" font-weight="bold">XDR PIPELINE</text>
+  <rect x="20" y="110" width="180" height="32" rx="6" fill="#1A1F2C"/>
+  <text x="36" y="131" fill="#F5F5F7" font-family="-apple-system, sans-serif" font-size="12">Host Telemetry</text>
+  <text x="36" y="171" fill="#8A94A6" font-family="-apple-system, sans-serif" font-size="12">Suricata Stream</text>
+  <text x="36" y="211" fill="#8A94A6" font-family="-apple-system, sans-serif" font-size="12">ML Anomaly Engine</text>
+  <text x="36" y="251" fill="#8A94A6" font-family="-apple-system, sans-serif" font-size="12">Active Response Rules</text>
+
+  <!-- Main Content Dashboard -->
+  <!-- Stats Row -->
+  <rect x="250" y="80" width="280" height="110" rx="10" fill="#131722" stroke="#222A3B"/>
+  <text x="274" y="115" fill="#8A94A6" font-family="-apple-system, sans-serif" font-size="12">SYSTEM OVERHEAD</text>
+  <text x="274" y="155" fill="#E6C4CF" font-family="-apple-system, sans-serif" font-size="28" font-weight="bold">&lt; 3.2% CPU</text>
+
+  <rect x="560" y="80" width="280" height="110" rx="10" fill="#131722" stroke="#222A3B"/>
+  <text x="584" y="115" fill="#8A94A6" font-family="-apple-system, sans-serif" font-size="12">INGESTION THROUGHPUT</text>
+  <text x="584" y="155" fill="#38BDF8" font-family="-apple-system, sans-serif" font-size="28" font-weight="bold">14,200 evt/s</text>
+
+  <rect x="870" y="80" width="280" height="110" rx="10" fill="#131722" stroke="#222A3B"/>
+  <text x="894" y="115" fill="#8A94A6" font-family="-apple-system, sans-serif" font-size="12">MITIGATED THREATS</text>
+  <text x="894" y="155" fill="#34D399" font-family="-apple-system, sans-serif" font-size="28" font-weight="bold">100% Automated</text>
+
+  <!-- Big Graph Box -->
+  <rect x="250" y="220" width="900" height="260" rx="10" fill="#131722" stroke="#222A3B"/>
+  <text x="274" y="255" fill="#F5F5F7" font-family="-apple-system, sans-serif" font-size="14" font-weight="600">Cross-Correlation Anomaly Score</text>
+  <path d="M280 430 Q 420 400, 560 320 T 840 370 T 1100 290" stroke="#E6C4CF" stroke-width="3" fill="none"/>
+  <path d="M280 430 Q 420 400, 560 320 T 840 370 T 1100 290 L 1100 450 L 280 450 Z" fill="url(#xdr-glow)" opacity="0.15"/>
+
+  <!-- Log Table -->
+  <rect x="250" y="505" width="900" height="210" rx="10" fill="#131722" stroke="#222A3B"/>
+  <text x="274" y="535" fill="#F5F5F7" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Active Response Event Stream</text>
+  <rect x="270" y="555" width="860" height="32" rx="4" fill="#1A1F2C"/>
+  <text x="290" y="575" fill="#34D399" font-family="monospace" font-size="11">[BLOCKED] 192.168.1.104 -> IPtables DROP :: Brute Force Anomaly Detected</text>
+  <rect x="270" y="595" width="860" height="32" rx="4" fill="#141824"/>
+  <text x="290" y="615" fill="#E6C4CF" font-family="monospace" font-size="11">[CORRELATED] Wazuh Agent 004 &amp; Suricata Signature SID:2018903 matched</text>
+  <rect x="270" y="635" width="860" height="32" rx="4" fill="#1A1F2C"/>
+  <text x="290" y="655" fill="#38BDF8" font-family="monospace" font-size="11">[INGEST] Osquery differential socket query completed in 4.2ms</text>
+
+  <defs>
+    <linearGradient id="xdr-glow" x1="690" y1="290" x2="690" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6C4CF"/>
+      <stop offset="1" stop-color="#0B0D12" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

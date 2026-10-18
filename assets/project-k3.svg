@@ -1,0 +1,58 @@
+<svg width="1200" height="750" viewBox="0 0 1200 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="750" fill="#0C0E14"/>
+  <!-- Top Bar -->
+  <rect x="0" y="0" width="1200" height="48" fill="#141822" stroke="#1F2636"/>
+  <circle cx="28" cy="24" r="6" fill="#EF4444"/>
+  <circle cx="48" cy="24" r="6" fill="#F59E0B"/>
+  <circle cx="68" cy="24" r="6" fill="#10B981"/>
+  <rect x="120" y="12" width="400" height="24" rx="4" fill="#0B0D12" stroke="#252D3D"/>
+  <text x="140" y="28" fill="#64748B" font-family="-apple-system, sans-serif" font-size="11">k3-vision-safety.internal/stream/camera-01</text>
+
+  <!-- Video Stream Canvas Frame -->
+  <rect x="40" y="75" width="760" height="500" rx="12" fill="#11151F" stroke="#252F42"/>
+  <text x="65" y="110" fill="#E6C4CF" font-family="-apple-system, sans-serif" font-size="14" font-weight="bold">LIVE INFERENCE · 42.5 FPS</text>
+  
+  <!-- Detection Bounding Boxes -->
+  <!-- Worker 1 Helmet & Vest (Compliant) -->
+  <rect x="120" y="150" width="180" height="340" rx="6" stroke="#34D399" stroke-width="2" stroke-dasharray="2 2" fill="#34D399" fill-opacity="0.05"/>
+  <rect x="120" y="125" width="140" height="25" rx="4" fill="#34D399"/>
+  <text x="128" y="142" fill="#064E3B" font-family="monospace" font-size="11" font-weight="bold">HELMET: 97.4%</text>
+
+  <rect x="135" y="220" width="150" height="150" rx="4" stroke="#34D399" stroke-width="2" fill="#34D399" fill-opacity="0.05"/>
+  <rect x="135" y="195" width="130" height="25" rx="4" fill="#34D399"/>
+  <text x="143" y="212" fill="#064E3B" font-family="monospace" font-size="11" font-weight="bold">VEST: 99.1%</text>
+
+  <!-- Worker 2 (No Helmet Violation) -->
+  <rect x="440" y="160" width="180" height="330" rx="6" stroke="#F43F5E" stroke-width="2" fill="#F43F5E" fill-opacity="0.06"/>
+  <rect x="440" y="135" width="160" height="25" rx="4" fill="#F43F5E"/>
+  <text x="448" y="152" fill="#FFFFFF" font-family="monospace" font-size="11" font-weight="bold">NO-HELMET VIOLATION</text>
+
+  <!-- Right Side Analytics Panel -->
+  <rect x="830" y="75" width="330" height="630" rx="12" fill="#131722" stroke="#222A3B"/>
+  <text x="855" y="115" fill="#F5F5F7" font-family="-apple-system, sans-serif" font-size="15" font-weight="bold">Real-time K3 Metrics</text>
+  
+  <rect x="855" y="140" width="280" height="85" rx="8" fill="#1A1F2C"/>
+  <text x="870" y="170" fill="#8A94A6" font-family="-apple-system, sans-serif" font-size="11">PPE COMPLIANCE RATE</text>
+  <text x="870" y="205" fill="#34D399" font-family="-apple-system, sans-serif" font-size="24" font-weight="bold">94.2%</text>
+
+  <rect x="855" y="240" width="280" height="85" rx="8" fill="#1A1F2C"/>
+  <text x="870" y="270" fill="#8A94A6" font-family="-apple-system, sans-serif" font-size="11">INFERENCE LATENCY</text>
+  <text x="870" y="305" fill="#38BDF8" font-family="-apple-system, sans-serif" font-size="24" font-weight="bold">18.4 ms</text>
+
+  <rect x="855" y="340" width="280" height="85" rx="8" fill="#1A1F2C"/>
+  <text x="870" y="370" fill="#8A94A6" font-family="-apple-system, sans-serif" font-size="11">MODEL ARCHITECTURE</text>
+  <text x="870" y="405" fill="#E6C4CF" font-family="-apple-system, sans-serif" font-size="20" font-weight="bold">YOLOv8 Nano Custom</text>
+
+  <text x="855" y="465" fill="#F5F5F7" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Incident Event Log</text>
+  <rect x="855" y="485" width="280" height="50" rx="6" fill="#1F1722" stroke="#4A1D2E"/>
+  <text x="868" y="508" fill="#FB7185" font-family="monospace" font-size="11">[14:32:01] Zone B Violation Logged</text>
+  <text x="868" y="524" fill="#64748B" font-family="monospace" font-size="10">Alert dispatched via Flask API</text>
+
+  <!-- Bottom Timeline -->
+  <rect x="40" y="600" width="760" height="105" rx="10" fill="#131722" stroke="#222A3B"/>
+  <text x="65" y="630" fill="#8A94A6" font-family="-apple-system, sans-serif" font-size="11">STREAM CONTINUITY TIMELINE</text>
+  <line x1="65" y1="660" x2="760" y2="660" stroke="#252D3D" stroke-width="2"/>
+  <rect x="65" y="650" width="180" height="20" rx="3" fill="#34D399" opacity="0.6"/>
+  <rect x="250" y="650" width="20" height="20" rx="3" fill="#F43F5E"/>
+  <rect x="275" y="650" width="485" height="20" rx="3" fill="#34D399" opacity="0.6"/>
+</svg>
