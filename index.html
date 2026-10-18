@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Latasya — Informatics Student &amp; Software Developer. President University &amp; IT Intern at PTDI-STTD.">
+  <meta name="author" content="Latasya">
+  <title>Latasya | Portfolio</title>
+
+  <!-- Google Fonts & Fontshare Clash Grotesk for True Reference Proportions -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@700,600,500,800,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet & Glass Folder Cards Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/glass-folder.css">
+</head>
+<body>
+
+  <!-- WebGL 2.0 Gradient Waves Container (Exact PTDI-STTD Presensi Background) -->
+  <div id="wavesContainer" class="waves-bg-container" aria-hidden="true"></div>
+
+  <!-- Subtle Film Grain Noise Overlay -->
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <!-- Ambient Top Glow Aura (Screenshot 3 Reference) -->
+  <div class="ambient-glow-top" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       FLOATING TOP PILL NAVBAR
+       ========================================================================= -->
+  <div class="floating-nav-wrapper">
+    <div class="floating-nav-pill">
+      <a href="#hero" class="nav-brand-title">latasya.com</a>
+      <button class="nav-menu-trigger" id="navMenuTrigger" aria-label="Open navigation menu">
+        <div class="dots-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       NAVIGATION MODAL POPUP (SCREENSHOT 5)
+       ========================================================================= -->
+  <div class="nav-modal-backdrop" id="navModalBackdrop">
+    <div class="nav-modal-card" id="navModalCard">
+      <div class="nav-modal-header">
+        <span class="nav-modal-title">latasya.com</span>
+        <button class="nav-modal-close" id="navModalClose" aria-label="Close navigation menu">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <nav class="nav-modal-links">
+        <a href="#bio" class="nav-modal-item">About Me</a>
+        <a href="#experience" class="nav-modal-item">Experience</a>
+        <a href="#projects" class="nav-modal-item">Projects</a>
+        <a href="#services" class="nav-modal-item">Services</a>
+        <a href="#contact" class="nav-modal-item">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FIXED FLOATING ACTION BADGES (BOTTOM RIGHT)
+       ========================================================================= -->
+  <div class="fixed-floating-actions">
+    <a href="#contact" class="floating-action-btn">Contact Me</a>
+    <a href="#experience" class="floating-action-btn">Experience</a>
+    <a href="#projects" class="floating-action-btn">Projects</a>
+    <div class="floating-badge-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+      <span>Portfolio 2026</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         HERO & BIO SHARED CONTINUOUS STAGE
+         The portrait card physically travels from Hero down into the Bio grid
+         ======================================================================= -->
+    <div class="hero-bio-stage" id="heroBioStage">
+
+      <!-- =====================================================================
+           SECTION 1: HERO SECTION (SCREENSHOT 1)
+           ===================================================================== -->
+      <section class="hero-section" id="hero">
+        <div class="hero-main-container">
+          
+          <!-- Giant Typography (Bold Grotesque with Natural Proportions) -->
+          <h1 class="hero-giant-typography">
+            <span class="title-word">SOFTWARE</span>
+            <span class="title-word">ENGINEER</span>
+          </h1>
+
+          <!-- Hero Card Anchor (Origin position for the single shared continuous card) -->
+          <div class="hero-card-anchor" id="heroCardAnchor"></div>
+
+        </div>
+
+        <!-- Hero Bottom Metadata -->
+        <div class="hero-footer-meta">
+          <div class="hero-tag-right">/INFORMATICS &amp; DEV</div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 2: BIO ("Hey!") SECTION (SCREENSHOT 2)
+           ===================================================================== -->
+      <section class="bio-section" id="bio">
+        <div class="container">
+          <div class="bio-grid">
+            
+            <!-- Left Column -->
+            <div class="bio-col-left">
+              <h2 class="bio-heading">Hey!</h2>
+              <p class="bio-text-lead">
+                Hi, I’m Nabila Latasya, an Informatics student at President University. I am interested in web development, basic cybersecurity, and practical IT systems.
+              </p>
+            </div>
+
+            <!-- Center Column (Target Landing Slot for the Single Card) -->
+            <div class="bio-col-center">
+              <div class="bio-card-placeholder" id="bioCardPlaceholder"></div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="bio-col-right">
+              <p class="bio-paragraph">
+                Currently interning at PTDI-STTD, where I help manage campus websites, observe network operations, and assist in developing an attendance system.
+              </p>
+              <p class="bio-paragraph">
+                I enjoy hands-on learning—supporting daily campus IT operations, resolving practical website issues, and building useful tools with modern web technologies.
+              </p>
+              <div class="bio-action-row" style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="#experience" class="pill-action-btn">
+                  <span>View Experience</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
+                </a>
+                <a href="#projects" class="pill-action-btn" style="background: rgba(118, 87, 200, 0.25);">
+                  <span>View Projects</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           THE SINGLE CONTINUOUS SHARED PORTRAIT CARD (CRITICAL REQUIREMENT)
+           Positioned absolutely inside #heroBioStage; travels from heroCardAnchor
+           to bioCardPlaceholder with 3D Y-axis flip during scroll.
+           ===================================================================== -->
+      <div class="shared-continuous-card" id="sharedContinuousCard">
+        <div class="flipper-inner-card" id="flipperInnerCard">
+          <!-- Front Face (Sisi Depan: Ikon Avatar Standar Terang & Glassmorphism saat Scroll Y = 0) -->
+          <div class="card-face card-face-front">
+            <svg viewBox="0 0 220 290" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" class="card-placeholder-svg">
+              <defs>
+                <linearGradient id="userIconGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+                  <stop offset="100%" stop-color="#D8C8FF" stop-opacity="0.82"/>
+                </linearGradient>
+                <radialGradient id="userGlow" cx="50%" cy="48%" r="50%">
+                  <stop offset="0%" stop-color="rgba(118, 87, 200, 0.45)"/>
+                  <stop offset="100%" stop-color="rgba(118, 87, 200, 0)"/>
+                </radialGradient>
+              </defs>
+              <!-- Subtle ambient glow circle behind the avatar -->
+              <circle cx="110" cy="142" r="85" fill="url(#userGlow)"/>
+              
+              <!-- Outer subtle circular ring frame -->
+              <circle cx="110" cy="142" r="70" fill="none" stroke="rgba(216, 200, 255, 0.22)" stroke-width="1.5" stroke-dasharray="4 4"/>
+              
+              <!-- Standard Human/User Icon -->
+              <!-- Head (Lingkaran Utuh) -->
+              <circle cx="110" cy="118" r="30" fill="url(#userIconGradient)"/>
+              
+              <!-- Shoulders / Torso (Bentuk Bahu Setengah Lingkaran Proporsional) -->
+              <path d="M58 198 C58 158, 80 152, 110 152 C140 152, 162 158, 162 198 C162 203, 157 206, 150 206 L70 206 C63 206, 58 203, 58 198 Z" fill="url(#userIconGradient)"/>
+            </svg>
+          </div>
+          <!-- Back Face (Sisi Belakang: Foto Wajah Asli, Terbuka saat Flip 3D 180deg) -->
+          <div class="card-face card-face-back">
+            <img src="assets/gueee.png" alt="Nabila Latasya" class="portrait-img">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =======================================================================
+         SECTION 3: PHILOSOPHY SCROLL SCRUB (SCREENSHOT 3)
+         ======================================================================= -->
+    <section class="philosophy-section" id="philosophy">
+      <div class="container">
+        <div class="philosophy-content">
+          <p class="scrub-text-display" id="philosophyScrubText">
+            <span class="scrub-word">From</span>
+            <span class="scrub-word">idea</span>
+            <span class="scrub-word">to</span>
+            <span class="scrub-word">launch.</span>
+            <span class="scrub-word">Clean,</span>
+            <span class="scrub-word">scalable</span>
+            <span class="scrub-word">digital</span>
+            <span class="scrub-word">products</span>
+            <span class="scrub-word">built</span>
+            <span class="scrub-word">to</span>
+            <span class="scrub-word">move</span>
+            <span class="scrub-word">fast,</span>
+            <span class="scrub-word">stay</span>
+            <span class="scrub-word">simple,</span>
+            <span class="scrub-word">and</span>
+            <span class="scrub-word">perform</span>
+            <span class="scrub-word">in</span>
+            <span class="scrub-word">real-world</span>
+            <span class="scrub-word">use,</span>
+            <span class="scrub-word">driven</span>
+            <span class="scrub-word">by</span>
+            <span class="scrub-word">clarity,</span>
+            <span class="scrub-word">structured</span>
+            <span class="scrub-word">systems,</span>
+            <span class="scrub-word">and</span>
+            <span class="scrub-word">intentional</span>
+            <span class="scrub-word">design.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         BRAND LOGO MARQUEE SECTION (DARK MONOCHROME SLOW CAROUSEL)
+         ======================================================================= -->
+    <section class="brand-marquee-section" aria-label="Trusted and Collaborated Brands">
+      <div class="brand-marquee-container">
+        <div class="brand-marquee-track">
+          
+          <!-- First Set of Logos -->
+          <div class="brand-logo-group">
+            <!-- Mailchimp -->
+            <div class="brand-logo-item" title="Mailchimp">
+              <svg viewBox="0 0 130 32" fill="currentColor">
+                <!-- Freddie Icon -->
+                <path d="M14 6 C10 6 6 9 6 13 C6 15 7 17 9 18 C8 19 7 21 7 23 C7 26 9 28 12 28 C14 28 16 27 17 25 C18 27 20 28 22 28 C25 28 27 26 27 23 C27 21 26 19 25 18 C27 17 28 15 28 13 C28 9 24 6 20 6 C18 6 16 7 14 6 Z M11 13 C12 13 13 14 13 15 C13 16 12 17 11 17 C10 17 9 16 9 15 C9 14 10 13 11 13 Z M23 13 C24 13 25 14 25 15 C25 16 24 17 23 17 C22 17 21 16 21 15 C21 14 22 13 23 13 Z"/>
+                <!-- Wordmark -->
+                <text x="36" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="14" letter-spacing="-0.02em" fill="currentColor">mailchimp</text>
+              </svg>
+            </div>
+
+            <!-- Notion -->
+            <div class="brand-logo-item" title="Notion">
+              <svg viewBox="0 0 110 32" fill="currentColor">
+                <path d="M6 6 L22 6 L22 26 L6 26 Z" fill="none" stroke="currentColor" stroke-width="2.5" rx="3"/>
+                <path d="M10 22 L10 10 L14 10 L18 18 L18 10 L20 10 L20 22 L16 22 L12 14 L12 22 Z" fill="currentColor"/>
+                <text x="30" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" letter-spacing="-0.01em" fill="currentColor">Notion</text>
+              </svg>
+            </div>
+
+            <!-- Spotify -->
+            <div class="brand-logo-item" title="Spotify">
+              <svg viewBox="0 0 115 32" fill="currentColor">
+                <circle cx="15" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="2.2"/>
+                <path d="M10 13 C13 12 18 12.5 21 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <path d="M11 16.5 C13.5 15.8 17.5 16.2 20 17.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                <path d="M12 20 C14 19.5 17 19.8 19 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+                <text x="32" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="15" letter-spacing="-0.02em" fill="currentColor">Spotify</text>
+              </svg>
+            </div>
+
+            <!-- Booking.com -->
+            <div class="brand-logo-item" title="Booking.com">
+              <svg viewBox="0 0 145 32" fill="currentColor">
+                <text x="4" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" letter-spacing="-0.03em" fill="currentColor">Booking<tspan font-weight="500">.com</tspan></text>
+                <circle cx="138" cy="18" r="3.5" fill="currentColor"/>
+              </svg>
+            </div>
+
+            <!-- Linear -->
+            <div class="brand-logo-item" title="Linear">
+              <svg viewBox="0 0 105 32" fill="currentColor">
+                <circle cx="15" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M10 20 L20 10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <text x="32" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" letter-spacing="-0.01em" fill="currentColor">Linear</text>
+              </svg>
+            </div>
+
+            <!-- Figma -->
+            <div class="brand-logo-item" title="Figma">
+              <svg viewBox="0 0 100 32" fill="currentColor">
+                <path d="M10 6 C8 6 6 8 6 10 C6 12 8 14 10 14 L14 14 L14 6 Z M14 6 L18 6 C20 6 22 8 22 10 C22 12 20 14 18 14 L14 14 Z M10 14 C8 14 6 16 6 18 C6 20 8 22 10 22 L14 22 L14 14 Z M14 14 L18 14 C20 14 22 16 22 18 C22 20 20 22 18 22 C16 22 14 20 14 18 Z M10 22 C8 22 6 24 6 26 C6 28 8 30 10 30 C12 30 14 28 14 26 L14 22 Z" fill="currentColor"/>
+                <text x="30" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" letter-spacing="-0.01em" fill="currentColor">Figma</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Duplicate Set of Logos for Infinite Seamless Scrolling -->
+          <div class="brand-logo-group" aria-hidden="true">
+            <!-- Mailchimp -->
+            <div class="brand-logo-item" title="Mailchimp">
+              <svg viewBox="0 0 130 32" fill="currentColor">
+                <path d="M14 6 C10 6 6 9 6 13 C6 15 7 17 9 18 C8 19 7 21 7 23 C7 26 9 28 12 28 C14 28 16 27 17 25 C18 27 20 28 22 28 C25 28 27 26 27 23 C27 21 26 19 25 18 C27 17 28 15 28 13 C28 9 24 6 20 6 C18 6 16 7 14 6 Z M11 13 C12 13 13 14 13 15 C13 16 12 17 11 17 C10 17 9 16 9 15 C9 14 10 13 11 13 Z M23 13 C24 13 25 14 25 15 C25 16 24 17 23 17 C22 17 21 16 21 15 C21 14 22 13 23 13 Z"/>
+                <text x="36" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="14" letter-spacing="-0.02em" fill="currentColor">mailchimp</text>
+              </svg>
+            </div>
+
+            <!-- Notion -->
+            <div class="brand-logo-item" title="Notion">
+              <svg viewBox="0 0 110 32" fill="currentColor">
+                <path d="M6 6 L22 6 L22 26 L6 26 Z" fill="none" stroke="currentColor" stroke-width="2.5" rx="3"/>
+                <path d="M10 22 L10 10 L14 10 L18 18 L18 10 L20 10 L20 22 L16 22 L12 14 L12 22 Z" fill="currentColor"/>
+                <text x="30" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" letter-spacing="-0.01em" fill="currentColor">Notion</text>
+              </svg>
+            </div>
+
+            <!-- Spotify -->
+            <div class="brand-logo-item" title="Spotify">
+              <svg viewBox="0 0 115 32" fill="currentColor">
+                <circle cx="15" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="2.2"/>
+                <path d="M10 13 C13 12 18 12.5 21 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+                <path d="M11 16.5 C13.5 15.8 17.5 16.2 20 17.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                <path d="M12 20 C14 19.5 17 19.8 19 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+                <text x="32" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="15" letter-spacing="-0.02em" fill="currentColor">Spotify</text>
+              </svg>
+            </div>
+
+            <!-- Booking.com -->
+            <div class="brand-logo-item" title="Booking.com">
+              <svg viewBox="0 0 145 32" fill="currentColor">
+                <text x="4" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="16" letter-spacing="-0.03em" fill="currentColor">Booking<tspan font-weight="500">.com</tspan></text>
+                <circle cx="138" cy="18" r="3.5" fill="currentColor"/>
+              </svg>
+            </div>
+
+            <!-- Linear -->
+            <div class="brand-logo-item" title="Linear">
+              <svg viewBox="0 0 105 32" fill="currentColor">
+                <circle cx="15" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M10 20 L20 10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <text x="32" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" letter-spacing="-0.01em" fill="currentColor">Linear</text>
+              </svg>
+            </div>
+
+            <!-- Figma -->
+            <div class="brand-logo-item" title="Figma">
+              <svg viewBox="0 0 100 32" fill="currentColor">
+                <path d="M10 6 C8 6 6 8 6 10 C6 12 8 14 10 14 L14 14 L14 6 Z M14 6 L18 6 C20 6 22 8 22 10 C22 12 20 14 18 14 L14 14 Z M10 14 C8 14 6 16 6 18 C6 20 8 22 10 22 L14 22 L14 14 Z M14 14 L18 14 C20 14 22 16 22 18 C22 20 20 22 18 22 C16 22 14 20 14 18 Z M10 22 C8 22 6 24 6 26 C6 28 8 30 10 30 C12 30 14 28 14 26 L14 22 Z" fill="currentColor"/>
+                <text x="30" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="15" letter-spacing="-0.01em" fill="currentColor">Figma</text>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 4: WORK EXPERIENCE (SCREENSHOT & TIMELINE ARCHITECTURE)
+         ======================================================================= -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        
+        <div class="section-header-row">
+          <div>
+            <h2 class="section-title-large">Work<br>Experience</h2>
+            <div class="section-sub-label">Career &amp; Internship History</div>
+          </div>
+          <a href="#projects" class="pill-action-btn">
+            <span>Explore Projects</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M7 17L17 7M17 7H7M17 7V17"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="experience-timeline">
+
+          <!-- Experience Item 1: IT Intern — PTDI-STTD -->
+          <div class="experience-item">
+            <div class="experience-node" aria-hidden="true">
+              <div class="experience-node-dot"></div>
+            </div>
+            <div class="experience-card">
+              <div class="experience-card-header">
+                <div>
+                  <h3 class="experience-role-title">IT Intern</h3>
+                  <div class="experience-company-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                      <path d="M9 22v-4h6v4"></path>
+                      <path d="M8 6h.01"></path>
+                      <path d="M16 6h.01"></path>
+                      <path d="M12 6h.01"></path>
+                      <path d="M12 10h.01"></path>
+                      <path d="M12 14h.01"></path>
+                      <path d="M16 10h.01"></path>
+                      <path d="M16 14h.01"></path>
+                      <path d="M8 10h.01"></path>
+                      <path d="M8 14h.01"></path>
+                    </svg>
+                    <span>PTDI-STTD (Politeknik Transportasi Darat Indonesia)</span>
+                  </div>
+                </div>
+                <div class="experience-date-badge">
+                  <span>August 2026 – December 2026</span>
+                </div>
+              </div>
+
+              <ul class="experience-bullet-list">
+                <li class="experience-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Monitored campus websites daily to make sure they run smoothly and are accessible.</span>
+                </li>
+                <li class="experience-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Updated and improved the campus IT Helpdesk website, including fixing layout issues and cleaning dummy test data.</span>
+                </li>
+                <li class="experience-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Created and mapped a simple building network topology for Ruijie equipment using MikroTik The Dude.</span>
+                </li>
+                <li class="experience-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Learned basic network monitoring, including checking server response and observing bandwidth traffic.</span>
+                </li>
+                <li class="experience-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Helped staff and students resolve basic computer and local network problems.</span>
+                </li>
+                <li class="experience-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Assisted the development team in testing a face-recognition attendance system for cadets.</span>
+                </li>
+              </ul>
+
+              <div class="experience-tags-row">
+                <span class="tech-badge">Campus Websites</span>
+                <span class="tech-badge">IT Helpdesk</span>
+                <span class="tech-badge">MikroTik The Dude</span>
+                <span class="tech-badge">Ruijie Hardware</span>
+                <span class="tech-badge">Network Monitoring</span>
+                <span class="tech-badge">Attendance System</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 2: Assistant Leader Production — PT Softpren Industri Indonesia -->
+          <div class="experience-item">
+            <div class="experience-node" aria-hidden="true">
+              <div class="experience-node-dot"></div>
+            </div>
+            <div class="experience-card">
+              <div class="experience-card-header">
+                <div>
+                  <h3 class="experience-role-title">Assistant Leader Production</h3>
+                  <div class="experience-company-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    <span>PT Softpren Industri Indonesia</span>
+                  </div>
+                </div>
+                <div class="experience-date-badge">
+                  <span>August 2023 – October 2023</span>
+                </div>
+              </div>
+
+              <ul class="experience-bullet-list">
+                <li class="experience-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Recorded daily production output data for various product items.</span>
+                </li>
+                <li class="experience-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Distributed daily production schedules and targets to machine operators.</span>
+                </li>
+                <li class="experience-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Monitored production progress on the floor and checked equipment needs.</span>
+                </li>
+                <li class="experience-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                  <span>Assisted the team lead in maintaining daily operational workflow and communication across line teams.</span>
+                </li>
+              </ul>
+
+              <div class="experience-tags-row">
+                <span class="tech-badge">Production Tracking</span>
+                <span class="tech-badge">Machine Scheduling</span>
+                <span class="tech-badge">Assembly Monitoring</span>
+                <span class="tech-badge">Line Coordination</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 5: FEATURED PROJECTS (SCREENSHOT & GRID CARDS)
+         ======================================================================= -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        
+        <div class="section-header-row">
+          <div>
+            <h2 class="section-title-large">Featured<br>Projects</h2>
+            <div class="section-sub-label">Selected Works &amp; Case Studies</div>
+          </div>
+          <a href="#contact" class="pill-action-btn">
+            <span>Get in Touch</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M7 17L17 7M17 7H7M17 7V17"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project Card 1: IT Helpdesk & Campus Network Monitoring -->
+          <div class="project-card" data-project-id="it-helpdesk" role="region" aria-label="IT Helpdesk & Campus Network Monitoring Project">
+            
+            <!-- Glass Folder Card 1 (Dark Velvet Waves & 3D Hinged Glass) -->
+            <div class="gf-root" data-tone="dark" data-open="false" data-project-id="it-helpdesk">
+              <div class="gf-stage">
+                <div class="gf-tilt">
+                  <div class="gf-shadow" aria-hidden="true"></div>
+
+                  <!-- Back Panel with Generative Amethyst Artwork -->
+                  <div class="gf-back" aria-hidden="true">
+                    <svg class="gf-art" viewBox="0 0 340 272" preserveAspectRatio="none">
+                      <defs>
+                        <linearGradient id="gf-art-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#120D1F" />
+                          <stop offset="35%" stop-color="#7657C8" />
+                          <stop offset="70%" stop-color="#21153b" />
+                          <stop offset="100%" stop-color="#D8C8FF" />
+                        </linearGradient>
+                        <radialGradient id="gf-glow-1" cx="65%" cy="30%" r="70%">
+                          <stop offset="0%" stop-color="rgba(216, 200, 255, 0.45)" />
+                          <stop offset="55%" stop-color="rgba(118, 87, 200, 0.25)" />
+                          <stop offset="100%" stop-color="transparent" />
+                        </radialGradient>
+                      </defs>
+                      <rect width="100%" height="100%" fill="url(#gf-art-1)" />
+                      <circle cx="230" cy="85" r="130" fill="url(#gf-glow-1)" />
+                      <path d="M-20,110 Q80,50 180,105 T380,75 L380,290 L-20,290 Z" fill="rgba(18, 13, 31, 0.72)" />
+                      <path d="M-20,155 Q100,105 220,165 T380,135 L380,290 L-20,290 Z" fill="rgba(11, 8, 18, 0.92)" />
+                    </svg>
+                    <div class="gf-back-sheen"></div>
+                  </div>
+
+                  <svg class="gf-rim gf-back-rim" viewBox="0 0 340 272" aria-hidden="true">
+                    <path d="M0 56A22 22 0 0 1 22 34L146 34C170 34 172 0 198 0L318 0A22 22 0 0 1 340 22L340 250A22 22 0 0 1 318 272L22 272A22 22 0 0 1 0 250Z" />
+                  </svg>
+
+                  <!-- The Contents: 3 Fanning Project Sheets -->
+                  <div class="gf-files" role="list" aria-label="IT Helpdesk Documents">
+                    <!-- Sheet 1 (Back) -->
+                    <div class="gf-sheet-slot" role="listitem">
+                      <button type="button" class="gf-sheet gf-sheet--art" style="--gf-slot: -1; --gf-depth: 2; --gf-jx: -4px; --gf-jr: -3deg; z-index: 1;" aria-label="Open Helpdesk-Portal overview">
+                        <span class="gf-sheet-head">
+                          <span class="gf-sheet-name">Helpdesk-Portal.php</span>
+                          <span class="gf-sheet-meta">PHP · 4.2 MB</span>
+                        </span>
+                        <span class="gf-lines" aria-hidden="true">
+                          <i style="width: 86%;"></i>
+                          <i style="width: 92%;"></i>
+                          <i style="width: 64%;"></i>
+                          <i style="width: 78%;"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- Sheet 2 (Middle) -->
+                    <div class="gf-sheet-slot" role="listitem">
+                      <button type="button" class="gf-sheet gf-sheet--paper" style="--gf-slot: 0; --gf-depth: 1; --gf-jx: 0px; --gf-jr: 0.8deg; z-index: 2;" aria-label="Open Ruijie Network Topology map">
+                        <span class="gf-sheet-head">
+                          <span class="gf-sheet-name">Ruijie-Topology.net</span>
+                          <span class="gf-sheet-meta">The Dude · Map</span>
+                        </span>
+                        <span class="gf-lines" aria-hidden="true">
+                          <i style="width: 82%;"></i>
+                          <i style="width: 90%;"></i>
+                          <i style="width: 60%;"></i>
+                          <i style="width: 72%;"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- Sheet 3 (Front) -->
+                    <div class="gf-sheet-slot" role="listitem">
+                      <button type="button" class="gf-sheet gf-sheet--paper" style="--gf-slot: 1; --gf-depth: 0; --gf-jx: 4px; --gf-jr: 3.2deg; z-index: 3;" aria-label="Open Ticket Workflow documentation">
+                        <span class="gf-sheet-head">
+                          <span class="gf-sheet-name">Ticket-Workflow.pdf</span>
+                          <span class="gf-sheet-meta">PDF · 320 KB</span>
+                        </span>
+                        <span class="gf-lines" aria-hidden="true">
+                          <i style="width: 76%;"></i>
+                          <i style="width: 88%;"></i>
+                          <i style="width: 54%;"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Frosted Glass Front Panel (Hinges on bottom edge) -->
+                  <div class="gf-front">
+                    <div class="gf-tint" aria-hidden="true"></div>
+                    <div class="gf-spec" aria-hidden="true"></div>
+                    <svg class="gf-rim gf-front-rim" viewBox="0 0 340 198" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="gf-rim-1" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0" stop-color="#fff" stop-opacity="0.9" />
+                          <stop offset="0.35" stop-color="#fff" stop-opacity="0.35" />
+                          <stop offset="1" stop-color="#fff" stop-opacity="0.12" />
+                        </linearGradient>
+                      </defs>
+                      <path d="M0 22A22 22 0 0 1 22 0L118 0C144 0 146 32 172 32L318 32A22 22 0 0 1 340 54L340 176A22 22 0 0 1 318 198L22 198A22 22 0 0 1 0 176Z" stroke="url(#gf-rim-1)" fill="none" />
+                    </svg>
+                    <button type="button" class="gf-hit" aria-expanded="false" aria-label="Toggle IT Helpdesk & Campus Network Monitoring folder"></button>
+                    <div class="gf-label">
+                      <span class="gf-title">IT Helpdesk &amp; System</span>
+                      <span class="gf-meta">3 files · PTDI-STTD</span>
+                    </div>
+                  </div>
+
+                  <!-- Key Action Button (+ / toggle) -->
+                  <button type="button" class="gf-key gf-key--add" aria-label="Toggle IT Helpdesk folder">
+                    <svg class="gf-glyph gf-glyph--plus" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 4.5v15M4.5 12h15" />
+                    </svg>
+                  </button>
+
+                </div>
+              </div>
+            </div>
+            
+            <div class="folder-hint-row">Hover to lean · Click to open folder</div>
+
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <h3 class="project-title">IT Helpdesk &amp; Campus Network Monitoring</h3>
+                <div class="project-category">Web Development &amp; System Improvement · PTDI-STTD</div>
+              </div>
+              <p class="project-card-desc">
+                Improved an internal ticketing website using PHP and MySQL. Updated the tracking workflow, made testimonial forms appear neatly when tickets are finished, secured file uploads, and built a simple status checker to monitor campus website availability.
+              </p>
+              <div class="project-tech-badges">
+                <span class="tech-badge">PHP</span>
+                <span class="tech-badge">MySQL</span>
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Bootstrap</span>
+                <span class="tech-badge">cURL</span>
+              </div>
+              <div class="project-card-footer">
+                <span class="project-view-case">
+                  <span>View Case Study</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2: Pet Adoption Mobile App -->
+          <div class="project-card" data-project-id="pet" role="region" aria-label="Pet Adoption Mobile App Project">
+            
+            <!-- Glass Folder Card 2 (4 Items Matching Screenshot 2) -->
+            <div class="gf-root" data-tone="dark" data-open="false" data-project-id="pet">
+              <div class="gf-stage">
+                <div class="gf-tilt">
+                  <div class="gf-shadow" aria-hidden="true"></div>
+
+                  <!-- Back Panel with Ember & Indigo Artwork -->
+                  <div class="gf-back" aria-hidden="true">
+                    <svg class="gf-art" viewBox="0 0 340 272" preserveAspectRatio="none">
+                      <defs>
+                        <linearGradient id="gf-art-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#0f172a" />
+                          <stop offset="35%" stop-color="#b45309" />
+                          <stop offset="65%" stop-color="#3b1d11" />
+                          <stop offset="100%" stop-color="#f59e0b" />
+                        </linearGradient>
+                        <radialGradient id="gf-glow-2" cx="70%" cy="35%" r="70%">
+                          <stop offset="0%" stop-color="rgba(245, 158, 11, 0.4)" />
+                          <stop offset="60%" stop-color="rgba(180, 83, 9, 0.18)" />
+                          <stop offset="100%" stop-color="transparent" />
+                        </radialGradient>
+                      </defs>
+                      <rect width="100%" height="100%" fill="url(#gf-art-2)" />
+                      <circle cx="240" cy="80" r="140" fill="url(#gf-glow-2)" />
+                      <path d="M-20,105 Q85,45 190,110 T380,70 L380,290 L-20,290 Z" fill="rgba(15, 23, 42, 0.75)" />
+                      <path d="M-20,150 Q105,100 225,160 T380,130 L380,290 L-20,290 Z" fill="rgba(9, 13, 22, 0.92)" />
+                    </svg>
+                    <div class="gf-back-sheen"></div>
+                  </div>
+
+                  <svg class="gf-rim gf-back-rim" viewBox="0 0 340 272" aria-hidden="true">
+                    <path d="M0 56A22 22 0 0 1 22 34L146 34C170 34 172 0 198 0L318 0A22 22 0 0 1 340 22L340 250A22 22 0 0 1 318 272L22 272A22 22 0 0 1 0 250Z" />
+                  </svg>
+
+                  <!-- The Contents: 4 Fanning Sheets (Exactly like Screenshot 2) -->
+                  <div class="gf-files" role="list" aria-label="Pet Adoption Documents">
+                    <!-- Sheet 1 (Backmost) -->
+                    <div class="gf-sheet-slot" role="listitem">
+                      <button type="button" class="gf-sheet gf-sheet--art" style="--gf-slot: -1; --gf-depth: 3; --gf-jx: -4px; --gf-jr: -3.5deg; z-index: 1;" aria-label="Open Lookbook & UI screens">
+                        <span class="gf-sheet-head">
+                          <span class="gf-sheet-name">Lookbook-UI.fig</span>
+                          <span class="gf-sheet-meta">38 screens</span>
+                        </span>
+                        <span class="gf-lines" aria-hidden="true">
+                          <i style="width: 86%;"></i>
+                          <i style="width: 90%;"></i>
+                          <i style="width: 60%;"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- Sheet 2 -->
+                    <div class="gf-sheet-slot" role="listitem">
+                      <button type="button" class="gf-sheet gf-sheet--paper" style="--gf-slot: -0.33; --gf-depth: 2; --gf-jx: -1px; --gf-jr: -1.2deg; z-index: 2;" aria-label="Open Adoption Form code">
+                        <span class="gf-sheet-head">
+                          <span class="gf-sheet-name">AdoptionForm.kt</span>
+                          <span class="gf-sheet-meta">Kotlin · 12 KB</span>
+                        </span>
+                        <span class="gf-lines" aria-hidden="true">
+                          <i style="width: 84%;"></i>
+                          <i style="width: 92%;"></i>
+                          <i style="width: 68%;"></i>
+                          <i style="width: 76%;"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- Sheet 3 -->
+                    <div class="gf-sheet-slot" role="listitem">
+                      <button type="button" class="gf-sheet gf-sheet--art" style="--gf-slot: 0.33; --gf-depth: 1; --gf-jx: 2px; --gf-jr: 1.5deg; z-index: 3;" aria-label="Open Pet Catalog preview">
+                        <span class="gf-sheet-head">
+                          <span class="gf-sheet-name">PetCatalog.ui</span>
+                          <span class="gf-sheet-meta">Android Native</span>
+                        </span>
+                        <span class="gf-lines" aria-hidden="true">
+                          <i style="width: 88%;"></i>
+                          <i style="width: 74%;"></i>
+                          <i style="width: 82%;"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- Sheet 4 (Frontmost) -->
+                    <div class="gf-sheet-slot" role="listitem">
+                      <button type="button" class="gf-sheet gf-sheet--paper" style="--gf-slot: 1; --gf-depth: 0; --gf-jx: 5px; --gf-jr: 3.8deg; z-index: 4;" aria-label="Open Contract & Booking documentation">
+                        <span class="gf-sheet-head">
+                          <span class="gf-sheet-name">BookingFlow.pdf</span>
+                          <span class="gf-sheet-meta">PDF · 320 KB</span>
+                        </span>
+                        <span class="gf-lines" aria-hidden="true">
+                          <i style="width: 80%;"></i>
+                          <i style="width: 88%;"></i>
+                          <i style="width: 58%;"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Frosted Glass Front Panel -->
+                  <div class="gf-front">
+                    <div class="gf-tint" aria-hidden="true"></div>
+                    <div class="gf-spec" aria-hidden="true"></div>
+                    <svg class="gf-rim gf-front-rim" viewBox="0 0 340 198" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="gf-rim-2" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0" stop-color="#fff" stop-opacity="0.9" />
+                          <stop offset="0.35" stop-color="#fff" stop-opacity="0.35" />
+                          <stop offset="1" stop-color="#fff" stop-opacity="0.12" />
+                        </linearGradient>
+                      </defs>
+                      <path d="M0 22A22 22 0 0 1 22 0L118 0C144 0 146 32 172 32L318 32A22 22 0 0 1 340 54L340 176A22 22 0 0 1 318 198L22 198A22 22 0 0 1 0 176Z" stroke="url(#gf-rim-2)" fill="none" />
+                    </svg>
+                    <button type="button" class="gf-hit" aria-expanded="false" aria-label="Toggle Pet Adoption Mobile App folder"></button>
+                    <div class="gf-label">
+                      <span class="gf-title">Pet Adoption App</span>
+                      <span class="gf-meta">4 files · Personal Study</span>
+                    </div>
+                  </div>
+
+                  <!-- Key Action Button (··· / options matching Screenshot 1 & 2) -->
+                  <button type="button" class="gf-key gf-key--more" aria-label="Toggle Pet Adoption folder">
+                    <svg class="gf-glyph gf-glyph--more" viewBox="0 0 30 12" aria-hidden="true">
+                      <rect x="1" y="1.5" width="8" height="9" rx="3.4" />
+                      <rect x="11" y="1.5" width="8" height="9" rx="3.4" />
+                      <rect x="21" y="1.5" width="8" height="9" rx="3.4" />
+                    </svg>
+                  </button>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="folder-hint-row">Hover to lean · Click to open folder</div>
+
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <h3 class="project-title">Pet Adoption Mobile App</h3>
+                <div class="project-category">Mobile App Project · Personal Study</div>
+              </div>
+              <p class="project-card-desc">
+                Created an Android mobile app for pet adoption using Android Studio. Designed the user interface inspired by layouts on Pinterest and Figma, and combined open-source code components from GitHub with the help of AI tools to build custom features.
+              </p>
+              <div class="project-tech-badges">
+                <span class="tech-badge">Android Studio</span>
+                <span class="tech-badge">Java/Kotlin</span>
+                <span class="tech-badge">Figma</span>
+                <span class="tech-badge">UI/UX</span>
+              </div>
+              <div class="project-card-footer">
+                <span class="project-view-case">
+                  <span>View Case Study</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3: Face-Recognition Attendance System (Assisted Project) -->
+          <div class="project-card" data-project-id="attendance" role="region" aria-label="Face-Recognition Attendance System Project">
+            
+            <!-- Glass Folder Card 3 -->
+            <div class="gf-root" data-tone="dark" data-open="false" data-project-id="attendance">
+              <div class="gf-stage">
+                <div class="gf-tilt">
+                  <div class="gf-shadow" aria-hidden="true"></div>
+
+                  <!-- Back Panel with Deep Plum & Teal Artwork -->
+                  <div class="gf-back" aria-hidden="true">
+                    <svg class="gf-art" viewBox="0 0 340 272" preserveAspectRatio="none">
+                      <defs>
+                        <linearGradient id="gf-art-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#070b08" />
+                          <stop offset="40%" stop-color="#1e3a2f" />
+                          <stop offset="70%" stop-color="#121815" />
+                          <stop offset="100%" stop-color="#6ee7b7" />
+                        </linearGradient>
+                        <radialGradient id="gf-glow-3" cx="60%" cy="30%" r="70%">
+                          <stop offset="0%" stop-color="rgba(110, 231, 183, 0.35)" />
+                          <stop offset="60%" stop-color="rgba(30, 58, 47, 0.2)" />
+                          <stop offset="100%" stop-color="transparent" />
+                        </radialGradient>
+                      </defs>
+                      <rect width="100%" height="100%" fill="url(#gf-art-3)" />
+                      <circle cx="230" cy="85" r="130" fill="url(#gf-glow-3)" />
+                      <path d="M-20,115 Q80,55 180,110 T380,80 L380,290 L-20,290 Z" fill="rgba(7, 11, 8, 0.72)" />
+                      <path d="M-20,160 Q100,110 220,170 T380,140 L380,290 L-20,290 Z" fill="rgba(5, 8, 6, 0.92)" />
+                    </svg>
+                    <div class="gf-back-sheen"></div>
+                  </div>
+
+                  <svg class="gf-rim gf-back-rim" viewBox="0 0 340 272" aria-hidden="true">
+                    <path d="M0 56A22 22 0 0 1 22 34L146 34C170 34 172 0 198 0L318 0A22 22 0 0 1 340 22L340 250A22 22 0 0 1 318 272L22 272A22 22 0 0 1 0 250Z" />
+                  </svg>
+
+                  <!-- The Contents: 3 Fanning Project Sheets -->
+                  <div class="gf-files" role="list" aria-label="Attendance System Documents">
+                    <!-- Sheet 1 (Back) -->
+                    <div class="gf-sheet-slot" role="listitem">
+                      <button type="button" class="gf-sheet gf-sheet--art" style="--gf-slot: -1; --gf-depth: 2; --gf-jx: -4px; --gf-jr: -3deg; z-index: 1;" aria-label="Open Face Detection AI pipeline">
+                        <span class="gf-sheet-head">
+                          <span class="gf-sheet-name">FaceDetection.py</span>
+                          <span class="gf-sheet-meta">OpenCV · 15 KB</span>
+                        </span>
+                        <span class="gf-lines" aria-hidden="true">
+                          <i style="width: 86%;"></i>
+                          <i style="width: 90%;"></i>
+                          <i style="width: 65%;"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- Sheet 2 (Middle) -->
+                    <div class="gf-sheet-slot" role="listitem">
+                      <button type="button" class="gf-sheet gf-sheet--paper" style="--gf-slot: 0; --gf-depth: 1; --gf-jx: 0px; --gf-jr: 0.8deg; z-index: 2;" aria-label="Open Cadet Attendance interface">
+                        <span class="gf-sheet-head">
+                          <span class="gf-sheet-name">CadetPresensi.ui</span>
+                          <span class="gf-sheet-meta">Flask · Web</span>
+                        </span>
+                        <span class="gf-lines" aria-hidden="true">
+                          <i style="width: 80%;"></i>
+                          <i style="width: 88%;"></i>
+                          <i style="width: 58%;"></i>
+                          <i style="width: 70%;"></i>
+                        </span>
+                      </button>
+                    </div>
+                    <!-- Sheet 3 (Front) -->
+                    <div class="gf-sheet-slot" role="listitem">
+                      <button type="button" class="gf-sheet gf-sheet--paper" style="--gf-slot: 1; --gf-depth: 0; --gf-jx: 4px; --gf-jr: 3.2deg; z-index: 3;" aria-label="Open Attendance Log data verification">
+                        <span class="gf-sheet-head">
+                          <span class="gf-sheet-name">AttendanceLog.csv</span>
+                          <span class="gf-sheet-meta">Sync · Data</span>
+                        </span>
+                        <span class="gf-lines" aria-hidden="true">
+                          <i style="width: 74%;"></i>
+                          <i style="width: 85%;"></i>
+                          <i style="width: 50%;"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Frosted Glass Front Panel -->
+                  <div class="gf-front">
+                    <div class="gf-tint" aria-hidden="true"></div>
+                    <div class="gf-spec" aria-hidden="true"></div>
+                    <svg class="gf-rim gf-front-rim" viewBox="0 0 340 198" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="gf-rim-3" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0" stop-color="#fff" stop-opacity="0.9" />
+                          <stop offset="0.35" stop-color="#fff" stop-opacity="0.35" />
+                          <stop offset="1" stop-color="#fff" stop-opacity="0.12" />
+                        </linearGradient>
+                      </defs>
+                      <path d="M0 22A22 22 0 0 1 22 0L118 0C144 0 146 32 172 32L318 32A22 22 0 0 1 340 54L340 176A22 22 0 0 1 318 198L22 198A22 22 0 0 1 0 176Z" stroke="url(#gf-rim-3)" fill="none" />
+                    </svg>
+                    <button type="button" class="gf-hit" aria-expanded="false" aria-label="Toggle Face-Recognition Attendance folder"></button>
+                    <div class="gf-label">
+                      <span class="gf-title">Attendance AI System</span>
+                      <span class="gf-meta">3 files · Assisted Project</span>
+                    </div>
+                  </div>
+
+                  <!-- Key Action Button (+ / toggle) -->
+                  <button type="button" class="gf-key gf-key--add" aria-label="Toggle Face Recognition folder">
+                    <svg class="gf-glyph gf-glyph--plus" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M12 4.5v15M4.5 12h15" />
+                    </svg>
+                  </button>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="folder-hint-row">Hover to lean · Click to open folder</div>
+
+            <div class="project-card-body">
+              <div class="project-meta-row">
+                <h3 class="project-title">Face-Recognition Attendance System</h3>
+                <div class="project-category">Academic &amp; Internship Project · PTDI-STTD</div>
+              </div>
+              <p class="project-card-desc">
+                Assisted in testing and integrating a face-recognition attendance system for student attendance at PTDI-STTD, helping ensure reliable student check-ins and data logging.
+              </p>
+              <div class="project-tech-badges">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">OpenCV</span>
+                <span class="tech-badge">Flask</span>
+              </div>
+              <div class="project-card-footer">
+                <span class="project-view-case">
+                  <span>View Case Study</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 6: SERVICES & CAPABILITIES
+         ======================================================================= -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <h2 class="section-title-large">Services &amp;<br>Capabilities</h2>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-num">/01</div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-desc">
+              Building clean, user-friendly websites with PHP, JavaScript, and Bootstrap.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-num">/02</div>
+            <h3 class="service-title">System Support &amp; Monitoring</h3>
+            <p class="service-desc">
+              Checking website uptime, monitoring basic network devices, and troubleshooting IT issues.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-num">/03</div>
+            <h3 class="service-title">UI/UX Design &amp; Prototyping</h3>
+            <p class="service-desc">
+              Creating practical and clean interface layouts using Figma.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 6: FOOTER & IMPACT CTA
+         ======================================================================= -->
+    <footer class="footer-cta-section" id="contact">
+      <div class="container">
+        <h2 class="footer-impact-title">
+          LET'S BUILD<br>TOGETHER.
+        </h2>
+
+        <div class="footer-bottom-grid">
+          <div>
+            <div class="footer-col-title">Get in Touch</div>
+            <p style="font-size: 14px; color: var(--text-light-muted); margin-bottom: 12px;">
+              Have an interesting project or internship opportunity? Feel free to reach out.
+            </p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input type="email" placeholder="Enter your email" required class="newsletter-input">
+              <button type="submit" class="newsletter-submit">Submit</button>
+            </form>
+          </div>
+
+          <div>
+            <div class="footer-col-title">/Navigation</div>
+            <ul class="footer-links-list">
+              <li><a href="#hero" class="footer-link">Home</a></li>
+              <li><a href="#bio" class="footer-link">About Me</a></li>
+              <li><a href="#experience" class="footer-link">Experience</a></li>
+              <li><a href="#projects" class="footer-link">Projects</a></li>
+              <li><a href="#services" class="footer-link">Services</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">/Connect</div>
+            <ul class="footer-links-list">
+              <li><a href="mailto:nabila.latasya@gmail.com" class="footer-link">nabila.latasya@gmail.com</a></li>
+              <li><a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-link">LinkedIn</a></li>
+              <li><a href="https://github.com" target="_blank" rel="noopener" class="footer-link">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-credits-bar">
+          <div>© 2026 Latasya. All rights reserved. · latasya.com</div>
+          <div style="font-family: var(--font-mono); font-size: 11px;">PRESIDENT UNIVERSITY · INFORMATICS</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- =========================================================================
+       PROJECT DETAIL CASE STUDY MODAL
+       ========================================================================= -->
+  <div class="project-modal-backdrop" id="projectModalBackdrop">
+    <div class="project-modal-box" id="projectModalBox">
+      <button class="modal-close-btn" id="projectModalClose" aria-label="Close project modal">✕</button>
+      <div id="projectModalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP & Lenis CDN Libraries for Fluid Motion -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  
+  <!-- Projects Data & Main Controller -->
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- MicroSlats Interactive Flowy Wave Background (React Bits) -->
+  <script type="module">
+    import { MicroSlatsBackground } from './js/micro-slats.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      try {
+        const container = document.getElementById('wavesContainer') || document.body;
+        const microSlats = new MicroSlatsBackground(container, {
+          preset: 'swell',
+          color: '#A855F7',
+          glintColor: '#ffffff',
+          backgroundColor: '#120f17',
+          slatWidth: 10,
+          slatHeight: 25,
+          gap: 3,
+          roundness: 0.75,
+          interactive: true,
+          cursorStrength: 1,
+          cursorSize: 40,
+          swirl: 0,
+          trail: 1.4,
+          lean: 0,
+          intro: true,
+          introDuration: 1.5
+        });
+        window.microSlats = microSlats;
+      } catch (err) {
+        console.warn('MicroSlats WebGL fallback active:', err);
+      }
+    });
+  </script>
+</body>
+</html>
