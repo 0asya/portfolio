@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Raymarched Silk Waves — WebGL 2.0 Dark Luxury</title>
+  <meta name="description" content="3D Raymarched Silk Gradient Waves WebGL 2.0 Shader with OGL, continuous scroll landscape, damped mouse parallax, and frosted glassmorphism login.">
+
+  <!-- Google Fonts: Plus Jakarta Sans, JetBrains Mono, & Clash Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@700,600,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Luxury Stylesheet -->
+  <link rel="stylesheet" href="css/raymarch-waves.css">
+</head>
+<body>
+
+  <!-- Ambient Top Glow Aura -->
+  <div class="ambient-glow-top" aria-hidden="true"></div>
+
+  <!-- FLOATING LUXURY NAVBAR -->
+  <header class="luxury-header">
+    <a href="#hero" class="brand-pill">
+      <div class="brand-symbol">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 12c3-5 7-5 10 0s7 5 10 0"></path>
+          <path d="M2 6c3-5 7-5 10 0s7 5 10 0"></path>
+          <path d="M2 18c3-5 7-5 10 0s7 5 10 0"></path>
+        </svg>
+      </div>
+      <span class="brand-title">Silk Waves</span>
+      <span class="brand-sub">WebGL 2.0</span>
+    </a>
+
+    <nav class="header-nav">
+      <a href="#hero" class="header-link active">Gateway</a>
+      <a href="#controls" class="header-link">Shader HUD</a>
+      <a href="#palette" class="header-link">Palette</a>
+      <a href="#code" class="header-link">Code</a>
+      <a href="index.html" class="header-link" style="color: var(--color-crest);">Portfolio &rarr;</a>
+    </nav>
+  </header>
+
+  <!-- PAGE WRAPPER (CONTINUOUS SCROLL ACROSS SECTIONS) -->
+  <div class="page-wrapper">
+
+    <!-- =======================================================================
+         SECTION 1: HERO & GLASSMORPHISM LOGIN GATEWAY
+         ======================================================================= -->
+    <section class="hero-auth-section" id="hero">
+      <div class="glass-login-container">
+        <div class="glass-card" id="glassLoginCard">
+          
+          <div class="card-top-badge">
+            <span class="pulse-dot"></span>
+            <span>OGL Raymarch Engine · 60 FPS</span>
+          </div>
+
+          <h1 class="card-title">Dark Luxury Access</h1>
+          <p class="card-subtitle">Continuous 3D silk waves fluid topography with parallax damping &amp; procedural film grain.</p>
+
+          <!-- Auth Mode Segmented Switcher -->
+          <div class="auth-tabs">
+            <button type="button" class="auth-tab-btn active" id="tabSignIn">Sign In</button>
+            <button type="button" class="auth-tab-btn" id="tabRegister">Create Account</button>
+          </div>
+
+          <form id="loginForm" onsubmit="event.preventDefault(); handleAuthSubmit();">
+            <!-- Email Input -->
+            <div class="form-group">
+              <label class="form-label" for="userEmail">Account Identity</label>
+              <div class="input-wrapper">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <input type="email" id="userEmail" class="luxury-input" placeholder="architect@luxurysilk.ai" required autocomplete="email">
+              </div>
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group">
+              <label class="form-label" for="userPassword">Passphrase</label>
+              <div class="input-wrapper">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <input type="password" id="userPassword" class="luxury-input" placeholder="••••••••••••" required autocomplete="current-password">
+                <button type="button" class="toggle-password" id="togglePassword" aria-label="Toggle password visibility">
+                  <svg id="eyeIcon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Options: Remember & Forgot Password -->
+            <div class="form-options">
+              <label class="checkbox-label">
+                <input type="checkbox" id="rememberMe" checked>
+                <div class="custom-checkbox">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Stay signed in</span>
+              </label>
+              <a href="#" class="forgot-link" onclick="event.preventDefault(); showToast('Password reset link sent to your luxury inbox');">Reset Pass?</a>
+            </div>
+
+            <!-- Glowing Submit CTA Button -->
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span>Enter Workspace</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </form>
+
+          <!-- Social Divider -->
+          <div class="divider">
+            <span>or authenticate via</span>
+          </div>
+
+          <!-- Social Auth Grid -->
+          <div class="social-auth-grid">
+            <button type="button" class="social-btn" title="Sign in with Apple" onclick="showToast('Apple Single-Sign-On Authenticated')">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.66-1.09 1.73-.95 2.76 1.01.08 2.05-.51 2.68-1.26z"/>
+              </svg>
+            </button>
+            <button type="button" class="social-btn" title="Sign in with Google" onclick="showToast('Google Workspace Authenticated')">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
+              </svg>
+            </button>
+            <button type="button" class="social-btn" title="Sign in with GitHub" onclick="showToast('GitHub Developer Authenticated')">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll cue: signals continuous 3D camera travel -->
+      <a href="#controls" class="scroll-indicator">
+        <span>Scroll For New Page Topology</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+      </a>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 2: LIVE SHADER CONTROL HUD (REALTIME TWEAKER)
+         ======================================================================= -->
+    <section class="content-section" id="controls">
+      <div class="section-header">
+        <span class="section-tag">Shader Telemetry</span>
+        <h2 class="section-title">Live <span>Shader HUD</span></h2>
+        <p class="section-desc">Adjust the mathematical wave equations in real time. Notice how the camera smoothly raymarches forward into new topography as you scroll across this section.</p>
+      </div>
+
+      <div class="control-hud-card">
+        <!-- Speed Control -->
+        <div class="slider-group">
+          <div class="slider-header">
+            <span>Wave Flow Speed</span>
+            <span class="slider-val" id="valSpeed">0.25</span>
+          </div>
+          <input type="range" class="luxury-slider" id="ctrlSpeed" min="0.05" max="0.80" step="0.01" value="0.25">
+        </div>
+
+        <!-- Wave Height / Amplitude -->
+        <div class="slider-group">
+          <div class="slider-header">
+            <span>Wave Amplitude</span>
+            <span class="slider-val" id="valHeight">1.25</span>
+          </div>
+          <input type="range" class="luxury-slider" id="ctrlHeight" min="0.30" max="2.60" step="0.05" value="1.25">
+        </div>
+
+        <!-- Wave Frequency -->
+        <div class="slider-group">
+          <div class="slider-header">
+            <span>Harmonic Density</span>
+            <span class="slider-val" id="valFreq">0.62</span>
+          </div>
+          <input type="range" class="luxury-slider" id="ctrlFreq" min="0.20" max="1.40" step="0.02" value="0.62">
+        </div>
+
+        <!-- Film Grain Intensity -->
+        <div class="slider-group">
+          <div class="slider-header">
+            <span>Anti-Banding Film Grain</span>
+            <span class="slider-val" id="valGrain">0.045</span>
+          </div>
+          <input type="range" class="luxury-slider" id="ctrlGrain" min="0.00" max="0.12" step="0.005" value="0.045">
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 3: ETHEREAL COLOR PALETTE & ARCHITECTURE
+         ======================================================================= -->
+    <section class="content-section" id="palette">
+      <div class="section-header">
+        <span class="section-tag">Curated Palette</span>
+        <h2 class="section-title">Harmonious <span>Luxury Tones</span></h2>
+        <p class="section-desc">Designed to mimic undulating silk illuminated by cinematic rim lighting. Click any swatch below to copy its HEX value.</p>
+      </div>
+
+      <div class="palette-grid">
+        <!-- Swatch 1: Page Background -->
+        <div class="palette-card" onclick="copyHex('#0B0812')">
+          <div class="swatch swatch-bg"></div>
+          <div class="palette-role">Background / Sky</div>
+          <div class="palette-name">Deep Obsidian</div>
+          <div class="palette-hex">
+            <span>#0B0812</span>
+            <span class="copy-badge">Copy</span>
+          </div>
+        </div>
+
+        <!-- Swatch 2: Horizon / Dark Base -->
+        <div class="palette-card" onclick="copyHex('#120D1F')">
+          <div class="swatch swatch-base"></div>
+          <div class="palette-role">Wave Valleys &amp; Base</div>
+          <div class="palette-name">Midnight Plum</div>
+          <div class="palette-hex">
+            <span>#120D1F</span>
+            <span class="copy-badge">Copy</span>
+          </div>
+        </div>
+
+        <!-- Swatch 3: Wave Slope -->
+        <div class="palette-card" onclick="copyHex('#7657C8')">
+          <div class="swatch swatch-slope"></div>
+          <div class="palette-role">Fluid Slope Midtones</div>
+          <div class="palette-name">Royal Electric Purple</div>
+          <div class="palette-hex">
+            <span>#7657C8</span>
+            <span class="copy-badge">Copy</span>
+          </div>
+        </div>
+
+        <!-- Swatch 4: Wave Crest / Highlight -->
+        <div class="palette-card" onclick="copyHex('#D8C8FF')">
+          <div class="swatch swatch-crest"></div>
+          <div class="palette-role">Crest &amp; Rim Glow</div>
+          <div class="palette-name">Luminescent Lilac</div>
+          <div class="palette-hex">
+            <span>#D8C8FF</span>
+            <span class="copy-badge">Copy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTION 4: QUICK INTEGRATION CODE
+         ======================================================================= -->
+    <section class="content-section" id="code">
+      <div class="section-header">
+        <span class="section-tag">Zero Overhead</span>
+        <h2 class="section-title">Drop-In <span>Integration</span></h2>
+        <p class="section-desc">Integrate this WebGL 2.0 silk raymarcher into any web project in under 3 lines of JavaScript.</p>
+      </div>
+
+      <div class="code-preview-card">
+        <div class="code-header">
+          <div class="code-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <button class="copy-btn" id="copyCodeBtn" onclick="copyCodeSnippet()">Copy Code</button>
+        </div>
+        <pre class="code-block"><code><span class="code-comment">// 1. Import modular RaymarchedSilkWaves ES Module</span>
+<span class="code-keyword">import</span> { <span class="code-func">RaymarchedSilkWaves</span> } <span class="code-keyword">from</span> <span class="code-string">'./js/raymarch-waves.js'</span>;
+
+<span class="code-comment">// 2. Instantiate with Dark Luxury defaults (Speed 0.25, Damped Scroll)</span>
+<span class="code-keyword">const</span> waves = <span class="code-keyword">new</span> <span class="code-func">RaymarchedSilkWaves</span>({
+  <span class="code-string">speed</span>: <span class="code-keyword">0.25</span>,          <span class="code-comment">// Requested sinusoidal speed</span>
+  <span class="code-string">waveHeight</span>: <span class="code-keyword">1.25</span>,     <span class="code-comment">// Ethereal silk amplitude</span>
+  <span class="code-string">waveFreq</span>: <span class="code-keyword">0.62</span>,       <span class="code-comment">// Organic harmonic density</span>
+  <span class="code-string">grainIntensity</span>: <span class="code-keyword">0.045</span> <span class="code-comment">// Anti-banding film grain</span>
+});
+
+<span class="code-comment">// 3. Automatic continuous scroll synchronization &amp; mouse parallax are active!</span></code></pre>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="luxury-footer">
+      <div>3D Raymarched Gradient Waves · WebGL 2.0 (OGL) &amp; Dark Luxury Glassmorphism</div>
+      <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 11px;">
+        Designed for <a href="index.html">Nabila Latasya</a> · President University
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- TOAST NOTIFICATION POPUP -->
+  <div id="toastNotification" style="
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: rgba(18, 13, 31, 0.9);
+    border: 1px solid var(--color-crest);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-family: var(--font-sans);
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 20px rgba(118, 87, 200, 0.4);
+    backdrop-filter: blur(20px);
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+  "></div>
+
+  <!-- INITIALIZE WEBGL 2.0 RAYMARCHER VIA ES MODULE -->
+  <script type="module">
+    import { RaymarchedSilkWaves } from './js/raymarch-waves.js';
+
+    // 1. Initialize Shader Engine
+    const wavesEngine = new RaymarchedSilkWaves({
+      speed: 0.25,
+      waveHeight: 1.25,
+      waveFreq: 0.62,
+      grainIntensity: 0.045
+    });
+    window.wavesEngine = wavesEngine;
+
+    // 2. Real-Time HUD Slider Bindings
+    const ctrlSpeed = document.getElementById('ctrlSpeed');
+    const ctrlHeight = document.getElementById('ctrlHeight');
+    const ctrlFreq = document.getElementById('ctrlFreq');
+    const ctrlGrain = document.getElementById('ctrlGrain');
+
+    const valSpeed = document.getElementById('valSpeed');
+    const valHeight = document.getElementById('valHeight');
+    const valFreq = document.getElementById('valFreq');
+    const valGrain = document.getElementById('valGrain');
+
+    ctrlSpeed.addEventListener('input', (e) => {
+      const v = parseFloat(e.target.value);
+      valSpeed.textContent = v.toFixed(2);
+      wavesEngine.updateConfig({ speed: v });
+    });
+
+    ctrlHeight.addEventListener('input', (e) => {
+      const v = parseFloat(e.target.value);
+      valHeight.textContent = v.toFixed(2);
+      wavesEngine.updateConfig({ waveHeight: v });
+    });
+
+    ctrlFreq.addEventListener('input', (e) => {
+      const v = parseFloat(e.target.value);
+      valFreq.textContent = v.toFixed(2);
+      wavesEngine.updateConfig({ waveFreq: v });
+    });
+
+    ctrlGrain.addEventListener('input', (e) => {
+      const v = parseFloat(e.target.value);
+      valGrain.textContent = v.toFixed(3);
+      wavesEngine.updateConfig({ grainIntensity: v });
+    });
+
+    // 3. Password Visibility Toggle
+    const toggleBtn = document.getElementById('togglePassword');
+    const passInput = document.getElementById('userPassword');
+    toggleBtn.addEventListener('click', () => {
+      const isPass = passInput.type === 'password';
+      passInput.type = isPass ? 'text' : 'password';
+      toggleBtn.style.color = isPass ? 'var(--color-crest)' : '#8679A8';
+    });
+
+    // 4. Tab Switcher
+    const tabSignIn = document.getElementById('tabSignIn');
+    const tabRegister = document.getElementById('tabRegister');
+    const submitBtn = document.getElementById('submitBtn');
+
+    tabSignIn.addEventListener('click', () => {
+      tabSignIn.classList.add('active');
+      tabRegister.classList.remove('active');
+      submitBtn.querySelector('span').textContent = 'Enter Workspace';
+    });
+
+    tabRegister.addEventListener('click', () => {
+      tabRegister.classList.add('active');
+      tabSignIn.classList.remove('active');
+      submitBtn.querySelector('span').textContent = 'Create Luxury Account';
+    });
+
+    // 5. Active Header Nav Highlight on Scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.header-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 200;
+        if (window.pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }, { passive: true });
+  </script>
+
+  <!-- UTILITY FUNCTIONS -->
+  <script>
+    function showToast(message) {
+      const toast = document.getElementById('toastNotification');
+      toast.textContent = message;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateY(0)';
+      clearTimeout(window._toastTimeout);
+      window._toastTimeout = setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(20px)';
+      }, 3000);
+    }
+
+    function copyHex(hex) {
+      navigator.clipboard.writeText(hex).then(() => {
+        showToast(`Copied ${hex} to clipboard!`);
+      }).catch(() => {
+        showToast(`Selected: ${hex}`);
+      });
+    }
+
+    function copyCodeSnippet() {
+      const snippet = `import { RaymarchedSilkWaves } from './js/raymarch-waves.js';\n\nconst waves = new RaymarchedSilkWaves({\n  speed: 0.25,\n  waveHeight: 1.25,\n  waveFreq: 0.62,\n  grainIntensity: 0.045\n});`;
+      navigator.clipboard.writeText(snippet).then(() => {
+        showToast('Integration code copied to clipboard!');
+      });
+    }
+
+    function handleAuthSubmit() {
+      const email = document.getElementById('userEmail').value;
+      showToast(`Welcome, ${email}! Connecting to 3D Raymarched Silk Space...`);
+    }
+  </script>
+
+</body>
+</html>
